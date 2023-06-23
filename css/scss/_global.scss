@@ -1,0 +1,139 @@
+//header
+
+
+//contenu
+.site-main {
+    #banner {
+        // position: relative;
+    }
+    .banner {
+        // height: 100vh; 
+        // position: fixed;
+        top: 0;
+        left: 0;
+        // min-width: 100%;
+        // min-height: 100%;
+        width: auto;
+        // height: auto;
+        z-index: -100;
+        // transform: translateX(-50%) translateY(-50%);
+    }
+    video {
+        // height: 100vh;
+        // width: 100%;    
+        // position: absolute;
+        max-width: 1440px;
+    }
+    .parallax {
+        // overflow: hidden;
+        // position: fixed;
+        // perspective: 1px;
+        // transform-style: preserve-3d;
+        // height: 100vh;
+        // width: 100vw;
+        min-width: 100%;
+        min-height: 100%;
+        overflow: hidden;
+        position: absolute;
+        display: block;
+
+    }
+    img {
+        position: absolute;
+        left: 22%;
+        top: 34%;        
+        max-width: 680px;
+        opacity: 0;
+        animation: fadeIn 1s ease-in both;
+        animation-delay: 1s;
+    }
+    .animation-up {
+        opacity: 0;
+        animation: fadeIn 1s ease-in both;
+        animation-delay: 1s;
+    }
+    .animation-dowm {
+        opacity: 0;
+        animation: fadeInDowm 1s ease-in both;
+        animation-delay: 1s;
+    }
+    .story {
+        background-color: #FFF5E9;
+        .story__article {
+            &:before, &:after {
+                opacity: 0;
+                animation: fadeIn 1s ease-in both;
+                animation-delay: 1s;
+            }
+        }
+            h2 {
+                opacity: 0;
+                animation: fadeIn 1s ease-in both;
+                animation-delay: 1s;
+                width: 100%;
+                &:before, &:after {
+                    opacity: 0;
+                    animation: fadeIn 1s ease-in both;
+                    animation-delay: 1s;
+                }
+            }
+        #place {
+            animation: teste 1s ease-in both;
+            animation-delay: 1s;  
+            background-repeat: no-repeat;
+            div {
+                h3 {
+                    opacity: 0;
+                    animation: fadeIn 1s ease-in both;
+                    animation-delay: 1s;
+                }
+            }
+        }
+    }
+    #studio {
+        div:before  {
+            opacity: 0;
+            animation: fadeIn 1s ease-in both;
+            animation-delay: 1s;  
+        }
+    }
+}
+//footer
+.site-footer {
+    &:before, &:after, ul:after {
+        opacity: 0;
+        animation: fadeIn 1s ease-in both;
+        animation-delay: 1s;  
+    }
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes teste {
+	from {
+		opacity: 0;
+        background-position: bottom -510px right 50%;
+	}
+	to {
+		opacity: 1;
+        background-position: bottom 0px right 50%;
+	}
+}
+@keyframes fadeInDowm {
+	from {
+		opacity: 0;
+		transform: translateY(-20%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
